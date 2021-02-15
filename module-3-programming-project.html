@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 3 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//--------//
+// Strings //
+//--------//
+console.log("Strings");
+
+/*
+  1. Create a variable name and assign it a value, and ensure it's in lowercase
+*/
+  var team = "Tampa Bay Bucs";  //First one is on me.
+
+/*
+  2. Convert your string to the Lower Case using the function that does this
+*/
+  var createToLowerCase = team.toLowerCase();
+  console.log(createToLowerCase);
+
+/*
+  3. Use the same variable in #1 and now use it as an upper case
+*/
+var createtoUpperCase = team.toUpperCase();
+console.log(createtoUpperCase);
+/*
+  4. Convert the string to the Upper Case using the function that does this.
+  Example; //show how to move to the upper case method.
+*/
+  var Tamp = team.toUpperCase
+  console.log(Tamp);
+/*
+  5. Replace the following String with " Tom Brady is the real GOAT";
+*/
+  var name = "Lebron James is the goat";
+  var tom = name.replace("Lebron James", "Tom Brady");
+
+  console.log(tom);
+/*
+  6. Show how you would search the string below to find University
+*/
+  var str = "Point Park University Rocks";
+  var ppu = str.search("University");
+
+  console.log(ppu);
+
+//--------------//
+// Numbers//
+//--------------//
+console.log("Numbers");
+
+// 1. Convert a number to a string
+var theNumber = 34; 
+var n = theNumber.toString();
+console.log(n);
+
+// 2. Check if the following is numeric
+var steelersSuperBowlAppearances = 8;
+var steelersBigBenSalary = 35000009.45;
+var steelers = "98" //code it to see if that variable is an integer with a boolean expression of true
+var steelersRock = "675";
+
+
+function steelersSuperBowlAppearances(x) {
+  if (units.isInteger(x)) {
+    return 'is an integer';
+  }
+  return 'is not an interger';
+}
+
+function steelersBigBenSalary(x) {
+  if (units.isInteger(x)) {
+    return 'is an integer';
+  }
+  return 'is not an interger';
+}
+
+function steelers(x) {
+  if (units.isInteger(x)) {
+    return 'is an integer';
+  }
+  return 'is not an interger';
+}
+
+function steelersRock(x) {
+  if (units.isInteger(x)) {
+    return 'is an integer';
+  }
+  return 'is not an interger';
+}
+
+//--------------//
+// Dates         //
+//--------------//
+//Example
+var day = new Date();
+var output = day.getDate();
+console.log(output);
+
+// 1. Get the Date. Create the variables and use the console to output your data
+// Follow above, that one is on me
+
+// 2. Get the Full Year
+var ye = day.getFullYear();
+console.log(ye);
+// 3. Get the Time
+var ti = day.getTime();
+console.log(ti);
+// 4. Get the Month
+var month = day.getMonth();
+console.log(month);
+// 5. Get the Seconds
+var sec = day.getSeconds();
+console.log(sec);
+// 6. Get the Hours, Minutes and Seconds together
+var Hours = day.getHours();
+var Mins = day.getMinutes();
+
+console.log(Hours,':',Mins,':',sec);
+
+
+
+
+
+</script>
+</head>
+<body>
+  See console!<br><br>
+  
+  <div id="div1"
+       style="background-color:yellow;"
+       onclick="swapColors();">
+    Hello
+  </div>
+  <div id="div2"
+       style="background-color:green;"
+       onclick="swapColors();">
+    World
+  </div>
+</body>
+</html>
