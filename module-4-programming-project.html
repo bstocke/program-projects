@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 4 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//-----------//
+// Functions //
+//-----------//
+console.log("Functions");
+
+// 1. Write a function named 'greet' that greets the user. Make sure that you
+//    call it as well.
+function greet(name)
+{
+    return "Hello " + name + "!";
+}
+
+console.log(greet("User")); 
+
+// 2. Write a function named 'sumAndPrint' that takes two numbers as parameters,
+//    adds them together, and prints the result to the console.
+var input1 = window.prompt("Enter a number: ", 0);
+var input2 = window.prompt("Enter a number: ", 0);
+
+var value1 = parseFloat(input1);
+var value2 = parseFloat(input2);
+
+var sume = sumAndPrint(value1 , value2);
+console.log("Sum: " + sume );
+
+function sumAndPrint (x,y)
+{ 
+   return (x+y);
+}
+// 3. Write a function named 'sum' that takes two numbers as parameters,
+//    adds them together, and returns the result.
+var input4 = window.prompt("Enter a number: ", 0);
+var input3 = window.prompt("Enter a number: ", 0);
+
+var value4 = parseFloat(input4);
+var value3 = parseFloat(input3);
+
+var sum2 = sum(value4 , value3);
+console.log("Sum: " + sum2 );
+
+function sum(x,y)
+{ 
+   return (x+y);
+}
+
+// 4. Write a function named 'findSmallest' that finds the smallest number in
+//    an array. For example, the answer for [23, 54, 3, 6, 4, 46] should be the
+//    number 3. Note that the function should take an array as input data.
+function min(input) {
+     if (toString.call(input) !== "[object Array]")  
+       return false;
+  return Math.min.apply(null, input);
+	}
+
+console.log(min([23, 54, 3, 6, 4, 46]));
+// 5. Define and implement a function named 'everySecondElement' that takes as
+//    input an array and returns every second element in a new array. For
+//    example, everySecondElement([1, 2, 3, 4, 5, 6]) should return [2, 4, 6].
+//    Hint: one solution uses the % operator.
+var everySecondElement = function (array) {
+  for (i=1; i <= array.length-1; i+=2) {
+    console.log(array[i]);
+  }
+}
+
+everySecondElement([1, 2, 3, 4, 5, 6]);
+
+//--------//
+// Switch //
+//--------//
+console.log("Switch");
+
+// 1. Create a date object and get the month as a number. Use a switch statement
+//    to convert it to text, e.g., 0 becomes January.
+function getMonthString(num)
+    {
+var month;    
+      switch(num)
+      {
+        case 0:
+          month="January";
+          break;
+        case 1:
+          month="February";
+          break;
+        case 2:
+          month="March";
+          break;
+        case 3:
+          month="April";
+          break;
+        case 4:
+          month="May";
+          break;
+        case 5:
+          month="June";
+          break;
+        case 6:
+          month="July";
+          break;
+        case 7:
+          month="August";
+          break;
+        case 8:
+          month="September";
+          break;
+        case 9:
+          month="October";
+          break;
+        case 10:
+          month="November";
+          break;
+        case 11:
+          month="December";
+          break;
+        default:
+          month="Invalid month";
+      }
+      return month;
+    }
+    theDate = new Date();
+    document.write("The month is ",getMonthString(theDate.getMonth()));
+
+
+//-------//
+// While //
+//-------//
+console.log("While");
+
+// 1. Create a factorial_while function that uses a while loop but otherwise
+//    returns the same results as the following function.
+
+function factorial_for(n) {
+  var total = 1;
+  for (var i = 1; i <= n; i++) {
+    total *= i;
+  }
+  return total;
+}
+function factorial(num) {
+         var result = 1
+         while (num) {
+            if ((num) == 0 || (num) == 1) {
+               break;
+            } else {
+               result = result * num;
+               num = num - 1;
+            }
+         }
+         return `${result}`
+      }
+
+      
+      var x = 5;
+      console.log(factorial(x));
+
+//----------//
+// Do-While //
+//----------//
+console.log("Do-While");
+
+// 1. Do the same for a factorial_do_while function.
+function factorial(x) {
+  if (x == 0 || x == 1) {
+    return 1;
+  }
+  var result = x;
+
+  do {
+    result = result * (x - 1);
+    x = x - 1;
+  }
+  
+  while (x > 1);
+  return result;
+}
+
+console.log(factorial(5));
+// 2. Take the code that we wrote in the lab and create a new page called doWhile_web.html
+// have the code output on the screen. When you check this code in, you should have
+// module-4-programming-project.html and doWhile_web.html
+
+
+</script>
+</head>
+<body>
+  See console!
+</body>
+</html>
