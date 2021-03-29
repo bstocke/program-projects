@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+function Person(show, ath, num, color) {
+  this.show = show;
+  this.ath = ath;
+  this.num = num;
+  this.color = color;
+}
+
+
+var myFav = new Person("JJBA", "Emanual Augustus", 8, "blue");
+
+
+document.getElementById("demo").innerHTML =
+"My favorite show is " + myFav.show + ". " + 
+"My favorite athelete is " + myFav.ath + ". " + 
+"My favorite number is " + myFav.num + ". " + 
+"My favorite color is " + myFav.color + "."
+</script>
+
+</body>
+</html>
